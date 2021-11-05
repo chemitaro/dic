@@ -11,19 +11,22 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+<div class="blog_wrapper">
+  <div class="form-group">
+    <%= form.label :title ,class: "bbb"%>
+    <%= form.text_field :title, placeholder:"タイトル入力して" ,class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
+  <div class="form-group">
+    <%= form.label :content,class: "bbb" %>
+    <%= form.text_area :content, placeholder:"今日の出来事は？", class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit "送信", class: "btn btn-outline-success btn-sm"%>
+    <%= form.submit "送信", class: "btn btn-outline-success btn-lg"%>
+  </div>
+  <%= link_to 'Back', blogs_path, class: "btn btn-outline-success btn-lg" %>
   </div>
 <% end %>
+
 </div>
